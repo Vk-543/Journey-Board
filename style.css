@@ -1,0 +1,121 @@
+/* Styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Header styles */
+header {
+    background: #6200ea;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Container styles */
+#task-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Task styles */
+.task {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents content from spilling out */
+    word-wrap: break-word; /* Ensures long words wrap to the next line */
+}
+
+/* Ensure the asset content wraps properly */
+.asset {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    word-wrap: break-word; /* Wrap long words inside assets */
+}
+
+/* Links inside the assets */
+.asset a {
+    color: #6200ea;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+.asset a:hover {
+    text-decoration: underline;
+}
+
+/* Add button styling */
+.add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-button:hover {
+    background-color: #4b00c0;
+}
+
+/* Style for delete button */
+.delete-button {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+/* Task container position relative for delete button positioning */
+.task {
+    position: relative;
+    overflow: hidden;
+    word-wrap: break-word; /* Ensure long words wrap properly */
+}
+
+.task:hover .delete-button {
+    display: block; /* Show delete button on hover */
+}
+
+/* Truncate long links */
+.asset a {
+    color: #6200ea;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 200px; /* Adjust width as needed */
+}
